@@ -1,3 +1,3 @@
 
 #link
-https://nguyenkhanhduy612.github.io/Shopee/
+https://nguyenkhanhduy612.github.io/Shopee/html/
