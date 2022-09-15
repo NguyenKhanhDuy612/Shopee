@@ -796,16 +796,7 @@ sale__bottom {
   margin-bottom: 10px;
   height: 60px;
   top: 7.375rem;
-  /* overflow: hidden;
-    background-color: #fff;
-    margin-bottom: 10px;
-    height: 60px;
-    position: fixed;
-    top: 120px;
-    left: 0;
-    z-index: 9;
-    width: 1200px;
-    margin-left: 55px; */
+  width: 1200px;
 }
 .sug .sug__sale--top button {
   background-color: inherit;
