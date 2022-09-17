@@ -133,14 +133,24 @@ $(".hot").slick({
     myFunction();
   };
 
+  var mainHeader = document.getElementById("sug");
   var header = document.getElementById("myHeader");
   var sticky = header.offsetTop;
 
+  var clheader = document.getElementById("footer");
+  var clsticky = clheader.offsetTop;
+
   function myFunction() {
-    if (window.pageYOffset > sticky) {
+    if (window.pageYOffset >= mainHeader.offsetTop) {
       header.classList.add("sticky");
     } else {
       header.classList.remove("sticky");
     }
+    if (window.pageYOffset >= clsticky) {
+      header.classList.remove("sticky");
+    }
+    // if (window.pageYOffset <= sticky) {
+    //   header.classList.add("sticky");
+    // }
   }
 }
