@@ -155,35 +155,56 @@ $(".hot").slick({
 //   }
 // }
 
+// {
+//   $(function () {
+//     var top =
+//       $("#menu").offset().top -
+//       parseFloat($("#menu").css("marginTop").replace(/auto/, 0));
+//     var footTop =
+//       $("#footer").offset().top -
+//       parseFloat($("#footer").css("marginTop").replace(/auto/, 0));
+
+//     var maxY = footTop - $("#menu").outerHeight();
+
+//     $(window).scroll(function (evt) {
+//       var y = $(this).scrollTop();
+//       if (y > top) {
+//         if (y < maxY) {
+//           $("#menu").addClass("fixed").removeAttr("style");
+//         } else {
+//           $("#menu")
+//             .removeClass("fixed")
+//             .css({
+//               position: "absolute",
+//               top: maxY - top + 20 + "px",
+//             });
+//         }
+//       } else {
+//         $("#menu").removeClass("fixed");
+//       }
+//     });
+//   });
+// }
+
 {
-  $(function () {
-    var top =
-      $("#menu").offset().top -
-      parseFloat($("#menu").css("marginTop").replace(/auto/, 0));
-    var footTop =
-      $("#footer").offset().top -
-      parseFloat($("#footer").css("marginTop").replace(/auto/, 0));
-
-    var maxY = footTop - $("#menu").outerHeight();
-
-    $(window).scroll(function (evt) {
-      var y = $(this).scrollTop();
-      if (y > top) {
-        if (y < maxY) {
-          $("#menu").addClass("fixed").removeAttr("style");
-        } else {
-          $("#menu")
-            .removeClass("fixed")
-            .css({
-              position: "absolute",
-              top: maxY - top + 20 + "px",
-            });
-        }
+  (function () {
+    var sug = $(".sug__sale--top").offset().top;
+    var header = $(".header").height();
+    var hsug = $(".sug__sale--top").height();
+    // var endsug = $(".sug").height();
+    var sfooter = $(".footer").offset().top;
+    // alert(hsug);
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > sug - header) {
+        $(".sug__sale--top").css({ position: "fixed", top: header });
       } else {
-        $("#menu").removeClass("fixed");
+        $(".sug__sale--top").css({ position: "relative", top: "0" });
+      }
+      if ($(window).scrollTop() > sfooter - header - hsug) {
+        $(".sug__sale--top").css({ position: "relative", top: "0" });
       }
     });
-  });
+  }.call(this));
 }
 
 {
