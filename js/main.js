@@ -128,29 +128,80 @@ $(".hot").slick({
 }
 
 // stick header
+// {
+//   window.onscroll = function () {
+//     myFunction();
+//   };
+
+//   var mainHeader = document.getElementById("sug");
+//   var header = document.getElementById("myHeader");
+//   var sticky = header.offsetTop;
+
+//   var clheader = document.getElementById("footer");
+//   var clsticky = clheader.offsetTop;
+
+//   function myFunction() {
+//     if (window.pageYOffset >= header.offsetTop) {
+//       header.classList.add("sticky");
+//     } else {
+//       header.classList.remove("sticky");
+//     }
+//     // if (window.pageYOffset >= clsticky) {
+//     //   header.classList.remove("sticky");
+//     // }
+//     // if (window.pageYOffset <= sticky) {
+//     //   header.classList.add("sticky");
+//     // }
+//   }
+// }
+
 {
-  window.onscroll = function () {
-    myFunction();
-  };
+  $(function () {
+    var top =
+      $("#menu").offset().top -
+      parseFloat($("#menu").css("marginTop").replace(/auto/, 0));
+    var footTop =
+      $("#footer").offset().top -
+      parseFloat($("#footer").css("marginTop").replace(/auto/, 0));
 
-  var mainHeader = document.getElementById("sug");
-  var header = document.getElementById("myHeader");
-  var sticky = header.offsetTop;
+    var maxY = footTop - $("#menu").outerHeight();
 
-  var clheader = document.getElementById("footer");
-  var clsticky = clheader.offsetTop;
+    $(window).scroll(function (evt) {
+      var y = $(this).scrollTop();
+      if (y > top) {
+        if (y < maxY) {
+          $("#menu").addClass("fixed").removeAttr("style");
+        } else {
+          $("#menu")
+            .removeClass("fixed")
+            .css({
+              position: "absolute",
+              top: maxY - top + 20 + "px",
+            });
+        }
+      } else {
+        $("#menu").removeClass("fixed");
+      }
+    });
+  });
+}
 
-  function myFunction() {
-    if (window.pageYOffset >= mainHeader.offsetTop) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-    if (window.pageYOffset >= clsticky) {
-      header.classList.remove("sticky");
-    }
-    // if (window.pageYOffset <= sticky) {
-    //   header.classList.add("sticky");
-    // }
-  }
+{
+  // Back to top button
+  (function () {
+    $(document).ready(function () {
+      return (
+        $(window).scroll(function () {
+          return $(window).scrollTop() > 200
+            ? $("#back__top").addClass("show")
+            : $("#back__top").removeClass("show");
+        }),
+        $("#back__top").click(function () {
+          return $("html,body").animate({
+            scrollTop: "0",
+          });
+        })
+      );
+    });
+  }.call(this));
 }
