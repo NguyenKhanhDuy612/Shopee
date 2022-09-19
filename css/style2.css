@@ -898,24 +898,24 @@ sale__bottom {
 .sug .sug--bottom .sug__product--bottom .sale__bottom--ht {
   position: absolute;
   /* bottom: 0; */
-  top: 100%;
+  /* top: 100%; */
   background: #ee4d24;
   /* background: rgba(0, 0, 0, 0.5); Black see-through */
   color: #f1f1f1;
   /* width: 100%; */
   transition: 0.5s ease;
-  opacity: 0;
+  /* opacity: 0; */
   /* color: wheat; */
   font-size: 14px;
   padding: 10px 22px;
   text-align: center;
-  width: auto;
+  /* width: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   /* height: 300px; */
-  /* z-index: 90; */
+  z-index: 90;
 }
 
 .sug
@@ -923,7 +923,6 @@ sale__bottom {
   .sug__product--bottom
   .sugproduct__bottom:hover
   .sale__bottom--ht {
-  z-index: 9;
   opacity: 1;
 }
 .sug--bottom .sug__product--bottom .sugproduct__bottom {
@@ -932,7 +931,7 @@ sale__bottom {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   border-radius: 4px;
-  z-index: 0;
+  position: relative;
 }
 .sug--bottom .sug__product--bottom .sugproduct__bottom:hover {
   transform: translateY(-2px);
