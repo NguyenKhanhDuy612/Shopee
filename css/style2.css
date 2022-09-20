@@ -71,6 +71,10 @@ body {
   padding-right: 6px;
   margin-right: 6px;
 }
+.header .header__top .header__top--left {
+  position: relative;
+}
+
 .header .header__top .header__top--left li {
   position: relative;
   /* padding-right: 4px; */
@@ -84,6 +88,21 @@ body {
   top: 50%;
   transform: translateY(-50%);
   margin-left: 6px;
+}
+
+.header .header__top .header__top--left .qr__img {
+  /* margin-top: 20px; */
+  position: absolute;
+  top: 40px;
+  left: 290px;
+  width: 150px;
+  height: 150px;
+  visibility: hidden;
+  opacity: 0;
+}
+.header .header__top .header__top--left:hover .qr__img {
+  visibility: visible;
+  opacity: 1;
 }
 .header .header__top i {
   font-size: 16px;

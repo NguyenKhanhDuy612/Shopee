@@ -202,7 +202,11 @@ $(".hot").slick({
       ) {
         $(".sug__sale--top").css({ position: "fixed", top: header });
       } else {
-        $(".sug__sale--top").css({ position: "relative", top: "0" });
+        $(".sug__sale--top").css({
+          position: "relative",
+          top: "0",
+          // transform: "translateX(100%)",
+        });
       }
     });
   }.call(this));
