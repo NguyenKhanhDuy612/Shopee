@@ -29,13 +29,39 @@
           <div class="header__top--left">
             <ul class="navbar__nav">
               <li class="navbar__nav--item">
-                <a href="#">Kênh Người Bán </a>
+                <a href="#defaultOpen">Kênh Người Bán </a>
               </li>
               <li class="navbar__nav--item">
                 <a href="#">Trở thành Người bán Shopee</a>
               </li>
-              <li class="navbar__nav--item">
-                <a class="show__qr" href="#">Tải ứng dụng</a>
+              <li class="navbar__nav--item show__qr">
+                <a class="" href="#">Tải ứng dụng</a>
+                <div class="qr__img">
+                  <img src="../img/qr/qr.png" alt="" />
+                  <div class="qr__text">
+                    <div class="qr__text--top">
+                      <div class="qr__icon">
+                        <i class="fa-brands fa-apple" style="color: gray"></i>
+                        App Store
+                      </div>
+                      <div class="qr__icon">
+                        <i
+                          class="fa-brands fa-google-play"
+                          style="color: rgb(40, 121, 214)"
+                        >
+                        </i>
+                        Google play
+                      </div>
+                    </div>
+                    <div class="qr__text--bottom">
+                      <div class="qr__icon">
+                        <i class="fa-solid fa-bag-shopping" style="color: red">
+                        </i>
+                        Appgallery
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
 
               <li class="navbar__nav--item">
@@ -54,21 +80,34 @@
                 </a>
               </li>
             </ul>
-            <div class="qr__img">
-              <img src="../img/qr/qr.png" alt="" />
-            </div>
           </div>
           <div class="header__top--right">
             <ul class="navbar__nav">
-              <li class="navbar__nav--item">
+              <li class="navbar__nav--item show__nf">
                 <a href="#"> <i class="fa-regular fa-bell"></i>Thông báo </a>
+                <div class="notification">
+                  <div class="notification__avartar">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <div class="notification__text">
+                    Đăng nhập để xem Thông báo
+                  </div>
+                  <div class="notification__user">
+                    <button type="submit" class="notification__user--register">
+                      Đăng ký
+                    </button>
+                    <button type="submit" class="notification__user--login">
+                      Đăng nhập
+                    </button>
+                  </div>
+                </div>
               </li>
               <li class="navbar__nav--item">
                 <a href="#"
                   ><i class="fa-regular fa-circle-question"></i>Hỗ trợ</a
                 >
               </li>
-              <li class="navbar__nav--item dropdown">
+              <li class="navbar__nav--item show__lg">
                 <a
                   href="#"
                   role="button"
@@ -79,10 +118,16 @@
                   Tiếng việt
                   <i class="fa-sharp fa-solid fa-chevron-down"> </i>
                 </a>
+                <div class="language">
+                  <div class="language__text">
+                    <div class="languge__text--country">Tiếng Việt</div>
+                    <div class="languge__text--country">Tiếng Anh</div>
+                  </div>
+                </div>
                 <!-- <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Tiếng việt</a>
-                              <a class="dropdown-item" href="#">English</a>
-                            </div> -->
+                  <a class="dropdown-item" href="#">Tiếng việt</a>
+                  <a class="dropdown-item" href="#">English</a>
+                </div> -->
               </li>
 
               <li class="navbar__nav--item">
@@ -126,14 +171,14 @@
                   placeholder="Mời bạn nhập tên sản phẩm"
                 />
               </div>
-              <button class="search__button">
+              <button type="submit" class="search__button">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
             <div class="text">
               <ul class="navbar__nav">
                 <li class="navbar__nav--item">
-                  <a href="#">Kênh Người Bán </a>
+                  <a href="#defaultOpen">Kênh Người Bán </a>
                 </li>
                 <li class="navbar__nav--item">
                   <a href="#">Trở thành Người bán Shopee</a>
@@ -145,7 +190,17 @@
             </div>
           </div>
           <div class="header__bottom--cart">
-            <a href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <div class="cart__show">
+              <a href="#">
+                <i class="fa-sharp fa-solid fa-cart-shopping"> </i>
+              </a>
+              <div class="cart__hidden">
+                <div class="cart__hidden--icon">
+                  <i class="fa-sharp fa-solid fa-cart-flatbed-suitcase"></i>
+                </div>
+                <div class="cart__hidden--text">Chưa có sản phẩm</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1245,46 +1300,30 @@
           </div>
         </section>
 
-        <!-- <section class="sug">
-          <div class="sug__top">
-            <div class="sug__top--left">
-              <div class="today__title">Gợi ý hôm nay</div>
-              <div class="today__sale">ngày 15 sale đồng giá</div>
+        <section class="sug" id="slug">
+          <div class="sug__sale--parent">
+            <div class="tab sug__sale--top">
+              <a href="#slug">
+                <button
+                  id="defaultOpen"
+                  class="tablinks sale__top--title"
+                  onclick="openSug(event, 'sug__product')"
+                >
+                  GỢI Ý HÔM NAY
+                </button>
+              </a>
+
+              <!-- <div style="width: 100%; height: 3px"></div> -->
+              <button
+                class="tablinks sale__top--img"
+                onclick="openSug(event, 'sug__sale')"
+              >
+                <img src="../img/sug/sug_sale.png" alt="" />
+              </button>
+              <!-- <div style="width: 100%; height: 3px"></div> -->
             </div>
           </div>
-          <div class="sug__bottom">
-            <div class="sug__bottom--cartogry">
-              <div class="cartogry__sptoday">
-                <div class="cartogry__sptoday--img">
-                  <img src="../img/main__day/category_img.png" alt="" />
-                </div>
-                <div class="cartogry__sptoday--info">
-                  <div class="sptoday__text">son...................</div>
-                  <div class="sptoday__price">230000</div>
-                </div>
-              </div>
-              X6
-            </div>
-          </div>
-        </section> -->
-        <section class="sug">
-          <div class="tab sug__sale--top">
-            <button
-              id="defaultOpen"
-              class="tablinks sale__top--title"
-              onclick="openSug(event, 'sug__product')"
-            >
-              GỢI Ý HÔM NAY
-            </button>
-            <!-- <div style="width: 100%; height: 3px"></div> -->
-            <button
-              class="tablinks sale__top--img"
-              onclick="openSug(event, 'sug__sale')"
-            >
-              <img src="../img/sug/sug_sale.png" alt="" />
-            </button>
-            <!-- <div style="width: 100%; height: 3px"></div> -->
-          </div>
+
           <!-- nút bấm -->
           <div class="sug--bottom content">
             <div id="sug__product" class="tabcontent">
@@ -1386,106 +1425,6 @@
                   <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
                 </div>
               </div>
-              <!--  sug 2-->
-              <div class="sug__product--bottom">
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-              </div>
-              <!-- sug 3 -->
               <div class="sug__product--bottom">
                 <div class="sugproduct__bottom">
                   <div class="sale__bottom--img">
@@ -1685,60 +1624,11 @@
                   <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
                 </div>
               </div>
-              <!-- sug 2 -->
               <div class="sug__product--bottom">
                 <div class="sugproduct__bottom">
                   <div class="sale__bottom--img">
                     <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
+                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
                     </a>
                   </div>
                   <div class="sale__bottom--text">
@@ -1783,60 +1673,10 @@
                   </div>
                   <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
                 </div>
-              </div>
-              <div class="sug__product--bottom">
                 <div class="sugproduct__bottom">
                   <div class="sale__bottom--img">
                     <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
-                    </a>
-                  </div>
-                  <div class="sale__bottom--text">
-                    Son lì HERORANGE mềm mịn như nhung chống thấm nước chống khô
-                    môi lâu trôi
-                  </div>
-                  <div class="sale__bottom--buy">
-                    <div class="bought__price">23.000</div>
-                    <div class="bought__number">Đã bán 74,4k</div>
-                  </div>
-                  <div class="sale__bottom--ht">Tìm sản phẩm tương tự</div>
-                </div>
-                <div class="sugproduct__bottom">
-                  <div class="sale__bottom--img">
-                    <a href="#">
-                      <img src="../img/sale/sale_bg_1.PNG" alt="" />
+                      <img src="../img/sale/sale_bg_2.PNG" alt="" />
                     </a>
                   </div>
                   <div class="sale__bottom--text">
