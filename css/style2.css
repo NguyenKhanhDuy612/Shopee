@@ -861,7 +861,7 @@ sale__bottom {
   height: 60px;
   /* top: 7.375rem; */
   width: 1200px;
-  z-index: 2;
+  z-index: 99;
 }
 .sug .sug__sale--top button {
   background-color: inherit;
