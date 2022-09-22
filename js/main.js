@@ -54,7 +54,7 @@
 
     let today = new Date(),
       yyyy = today.getFullYear(),
-      dayMonth = "09/20/",
+      dayMonth = "10/20/",
       sale = dayMonth + yyyy;
 
     const countDown = new Date(sale).getTime(),

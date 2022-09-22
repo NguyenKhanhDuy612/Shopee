@@ -29,7 +29,7 @@
           <div class="header__top--left">
             <ul class="navbar__nav">
               <li class="navbar__nav--item">
-                <a href="#defaultOpen">Kênh Người Bán </a>
+                <a href="#">Kênh Người Bán </a>
               </li>
               <li class="navbar__nav--item">
                 <a href="#">Trở thành Người bán Shopee</a>
@@ -1304,11 +1304,10 @@
             </div>
           </div>
         </section>
-
         <section class="sug" id="slug">
           <div class="sug__sale--parent">
             <div class="tab sug__sale--top">
-              <a href="#">
+              <a href="#slug">
                 <button
                   id="defaultOpen"
                   class="tablinks sale__top--title"
@@ -1317,14 +1316,15 @@
                   GỢI Ý HÔM NAY
                 </button>
               </a>
+              <a href="#slug">
+                <button
+                  class="tablinks sale__top--img"
+                  onclick="openSug(event, 'sug__sale')"
+                >
+                  <img src="../img/sug/sug_sale.png" alt="" />
+                </button>
+              </a>
 
-              <!-- <div style="width: 100%; height: 3px"></div> -->
-              <button
-                class="tablinks sale__top--img"
-                onclick="openSug(event, 'sug__sale')"
-              >
-                <img src="../img/sug/sug_sale.png" alt="" />
-              </button>
               <!-- <div style="width: 100%; height: 3px"></div> -->
             </div>
           </div>

@@ -1087,6 +1087,13 @@ sale__bottom {
   width: 1200px;
   z-index: 99;
 }
+.sug .sug__sale--top.active-fixed {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  left: 53px;
+  /* margin-bottom: 200px; */
+}
 .sug .sug__sale--top button {
   background-color: inherit;
   float: left;
@@ -1155,8 +1162,13 @@ sale__bottom {
 
 .sug .sug--bottom .sug__product--bottom .sale__bottom--text {
   font-size: 12px;
-  padding: 5px 2px;
-  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .sug .sug--bottom .sug__product--bottom .sale__bottom--buy {
   display: flex;
@@ -1364,12 +1376,7 @@ li {
   width: 100%;
   left: 53px;
 } */
-.sug__sale--top.active-fixed {
-  z-index: 99;
-  position: fixed;
-  width: 100%;
-  left: 53px;
-}
+
 @media screen and (max-width: 320px) {
   body {
     max-width: 320px;
