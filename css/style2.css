@@ -41,24 +41,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
-  /* min-height: 1000vh; */
 }
 
 .header {
   display: flex;
-  /* margin: auto; */
   z-index: 999;
   position: fixed;
   background-color: #f84a2f;
-  /* background-size: 100%; */
   height: 120px;
   transform: translateZ(0);
   justify-content: center;
   align-items: center;
-  /* margin-right: 20px; */
   width: 100%;
-  /* margin-bottom: 120px; */
-
   top: 0;
   left: 0;
 }
@@ -79,9 +73,6 @@ body {
   position: relative;
 }
 
-/* .header .header__top .header__top--left li {
-  position: relative;
-} */
 .header__top .header__top--left li:not(:last-child):after {
   height: 12px;
   position: absolute;
@@ -121,7 +112,6 @@ body {
   margin: auto;
   justify-content: center;
   align-items: center;
-  /* padding: 5px 10px; */
 }
 .header .header__top .header__top--left .qr__text .qr__text--bottom {
   display: flex;
@@ -162,7 +152,6 @@ body {
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  /* align-items: flex-start; */
 }
 .header .header__top .header__top--right .show__lg:hover .language {
   visibility: visible;
@@ -236,7 +225,6 @@ body {
   font-size: 130px;
   color: #ee4d24;
   text-align: center;
-  /* background-color: #ee4d24; */
 }
 .header .header__top .header__top--right .notification .notification__text {
   margin-top: 20px;
@@ -1381,4 +1369,36 @@ li {
   position: fixed;
   width: 100%;
   left: 53px;
+}
+@media screen and (max-width: 320px) {
+  body {
+    max-width: 320px;
+  }
+  .header .header__top,
+  .header .header__bottom .header__bottom--logo,
+  .header .header__bottom .header__bottom--input .text {
+    display: none;
+  }
+  .header {
+    position: absolute;
+    background-color: transparent;
+    width: 320px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .header .header__bottom .header__bottom--input .search {
+    position: relative;
+    display: flex;
+    z-index: 999;
+  }
+  .header .header__bottom .header__bottom--input .search .search__field {
+  }
+  .header .header__bottom .header__bottom--input .search .search__button {
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    background-color: transparent;
+    color: #bbb;
+    height: 40px;
+  }
 }
