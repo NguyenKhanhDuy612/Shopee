@@ -1,0 +1,107 @@
+.header {
+  position: relative;
+}
+.center__hearder {
+  color: #000000cc;
+  /* pointer-events: none; */
+}
+.center__hearder .center__hearder--title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.center__hearder .center__hearder--title li:not(:last-child):after {
+  content: ">";
+  margin: 0 5px;
+  color: blue;
+}
+.center__detail {
+  background-color: #fff;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center__detail .detail__img {
+  display: flex;
+  flex-basis: 40%;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.center__detail .detail__img--product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .detail__img--product img {
+  display: flex;
+  justify-content: space-around;
+} */
+.center__detail .detail__img--share {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.center__detail .detail__img--share .share__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+.center__detail .detail__img--share .share__link::after {
+  content: "";
+  border: 1px #bbb solid;
+  /* text-align: center; */
+  margin: 0 30px;
+  height: 22px;
+}
+.center__detail .detail__img--share .share__link .share__link--text {
+  margin-right: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.center__detail .detail__img--share .share__link .share__link--icon a {
+  margin-left: 5px;
+  font-size: 25px;
+  text-align: center;
+  /* justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row; */
+}
+.center__detail .detail__img--share .share__like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.center__detail .detail__img--share .share__like .share__like--heart {
+  font-size: 25px;
+  padding-right: 5px;
+}
+.center__detail .detail__img--share .share__like .share__like--plove a {
+  font-size: 16px;
+  color: #222222;
+}
+
+.center__detail .detail__text {
+  background-color: #bbb;
+}
+.center__detail .detail__text .detail__text--hearder {
+  font-size: 20px;
+}
+.center__detail .detail__text .detail__text--app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.center__detail .detail__text .detail__text--app:not(:last-child):after {
+  content: "";
+  padding: 0 10px;
+  border: 10px solid #bbb;
+}
+.center__detail .detail__text .detail__text--app .app__star {
+  font-size: 16px;
+}

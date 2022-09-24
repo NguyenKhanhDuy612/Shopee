@@ -79,8 +79,9 @@
 {
   function openSug(evt, sugName) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    // tabcontent[0].style.display = "block";
+    tabcontent = document.getElementsByClassName("tabcontent__first");
+    // tabcontent.style.display = "block";
+    tabcontent[0].style.display = "block";
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
@@ -92,8 +93,17 @@
     document.getElementById(sugName).style.display = "block";
     evt.currentTarget.className += " active";
   }
-  document.getElementById("defaultOpen").click();
+  // document.getElementById("defaultOpen").click();
 }
+// let sug = document.querySelector("slug");
+// let heightSug = document.querySelector(".sug").offsetTop;
+// window.scroll({ top: heightSug });
+// addEventListener("click", (event) => {
+//   window.scroll({ top: 2400 });
+// });
+document.getElementById("defaultOpen").addEventListener("click", (event) => {
+  window.scrollTo({ top: 2300 });
+});
 
 window.addEventListener("DOMContentLoaded", (event) => {
   // slide sale
