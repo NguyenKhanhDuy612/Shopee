@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="../fontawesome6/css/all.css" />
     <link rel="stylesheet" href="../css/style2.css" />
     <link rel="stylesheet" href="../css/styleLogin.css" />
+    <link rel="stylesheet" href="../css/styleSingin.css" />
   </head>
   <body>
     <header class="header__login">
@@ -28,7 +29,7 @@
                 </svg>
               </a>
             </div>
-            <div class="logo__text">Đăng ký</div>
+            <div class="logo__text">Đăng nhập</div>
           </div>
           <div class="login__top--right">
             <a href="#">Bạn cần giúp đỡ ?</a>
@@ -41,21 +42,39 @@
         <div class="login__center">
           <div class="form__login">
             <form action="">
-              <div class="form__login--text">Đăng ký</div>
+              <div class="form__login--text">Đăng nhập</div>
               <div class="form__login--center">
                 <div class="form--input">
                   <input
                     class="mk"
                     type="text"
-                    placeholder="Số điện thoại"
+                    placeholder="Email/Số điện thoại/Tên đăng nhập"
                     value=""
                   />
                 </div>
+                <div class="form--input">
+                  <input
+                    class="mk"
+                    type="password"
+                    placeholder="Mật khẩu"
+                    value=""
+                  />
+                  <i class="fa-sharp fa-solid fa-eye"></i>
+                  <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                </div>
                 <a href="#">
                   <button class="dk" type="submit" name="dangky">
-                    TIẾP THEO
+                    Đăng nhập
                   </button>
                 </a>
+                <div class="form__event">
+                  <div class="form__event--forget">
+                    <a href="#"> Quên mật khẩu </a>
+                  </div>
+                  <div class="form__event--sms">
+                    <a href="#">Đăng nhập với SMS</a>
+                  </div>
+                </div>
 
                 <div class="form--bottom">
                   <div class="bottom__line"></div>
@@ -70,13 +89,13 @@
                     <div class="fb__text">Facebook</div>
                   </button>
                   <button type="submit" class="form__other--gg form__other--fb">
-                    <div class="gg__icon">
+                    <div class="gg__icon fb__icon">
                       <i class="fa-brands fa-google"></i>
                     </div>
                     <div class="gg__text">Google</div>
                   </button>
                 </div>
-                <div class="form__textbottom">
+                <!-- <div class="form__textbottom">
                   <div class="text__top">
                     Bằng việc đăng kí, bạn đã đồng ý với Shopee về
                   </div>
@@ -85,11 +104,11 @@
                     &
                     <a href="#">Chính sách bảo mật</a>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="form__login--bottom">
-                Bạn đã có tài khoản?
-                <a href="singin.html">Đăng nhập</a>
+                Bạn mới biết đến shopee?
+                <a href="login.html">Đăng ký</a>
               </div>
             </form>
           </div>
@@ -238,54 +257,6 @@
             >
             </i>
           </p>
-          <!-- <div class="footer__top--hearder">
-            <div class="f__titile">
-              <b>SHOPEE - GÌ CŨNG CÓ, MUA HẾT Ở SHOPEE</b>
-            </div>
-            <div class="f__info">
-              
-              Shopee - ứng dụng mua sắm trực tuyến thú vị, tin cậy, an toàn và
-              miễn phí! Shopee là nền tảng giao dịch trực tuyến hàng đầu ở Đông
-              Nam Á, có trụ sở chính ở Singapore, đã có mặt ở khắp các khu vực
-              <span>
-                Singapore, Malaysia, Indonesia, Thái Lan, Philippines, Đài Loan,
-                Brazil, México, Colombia, Chile, Poland, Spain, Argentina.
-              </span>
-              Với sự đảm bảo của Shopee, bạn sẽ mua hàng trực tuyến an tâm và
-              nhanh chóng hơn bao giờ hết!
-            </div>
-            <br />
-            <div class="f__titile">
-              <b>MUA SẮM VÀ BÁN HÀNG ONLINE ĐƠN GIẢN, NHANH CHÓNG VÀ AN TOÀN</b>
-            </div>
-            <div class="f__info">
-              Nếu bạn đang tìm kiếm một trang web để mua và bán hàng trực tuyến
-              thì Shopee.vn là một sự lựa chọn tuyệt vời dành cho bạn. Bản chất
-              của Shopee là một social E-commerce platform - nền tảng trang web
-              thương mại điện tử tích hợp mạng xã hội. Điều này cho phép người
-              mua và người bán hàng dễ dàng tương tác, trao đổi thông tin về sản
-              phẩm và chương trình khuyến mãi của shop. Nhờ nền tảng đó, việc
-              mua bán trên Shopee trở nên nhanh chóng và đơn giản hơn. Bạn có
-              thể trò chuyện trực tiếp với nhà bán hàng để hỏi trực tiếp về mặt
-              hàng cần mua. Còn nếu bạn muốn tìm mua những dòng sản phẩm chính
-              hãng, uy tín, Shopee Mall chính là sự lựa chọn lí tưởng dành cho
-              bạn. Để bạn có thể dễ dàng khi tìm hiểu và sử dụng sản phẩm,
-              <span>
-                Shopee Blog- trang blog thông tin chính thức của Shopee
-              </span>
-              sẽ giúp bạn có thể tìm được cho mình các kiến thức về xu hướng
-              thời trang, review công nghệ, mẹo làm đẹp, tin tức tiêu dùng và
-              deal giá tốt bất ngờ.
-              <div class="f__see">
-                Xem Thêm
-                <i
-                  class="fa-sharp fa-solid fa-angle-right"
-                  style="font-size: 10px; cursor: pointer"
-                >
-                </i>
-              </div>
-            </div>
-          </div> -->
         </div>
       </section>
       <section class="footer__bottom">

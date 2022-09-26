@@ -1,0 +1,5 @@
+.main__login .login__center .form__login .form__login--center .form--bottom {
+  display: flex;
+  margin-top: -5px;
+  align-items: center;
+}
